@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,400;1,500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -15,7 +16,12 @@
   </head>
   <body>
     <header class="head">
-      <section class="head_section">
+      <section
+        data-aos="fade-right"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        class="head_section"
+      >
         <div class="head_section_part">
           <img src="./src/assets//svg/emaarLogo.svg" alt="" />
           <span></span>
@@ -43,25 +49,69 @@
         </div>
       </section>
     </header>
+
+    <!-- 30 second pop-up modal -->
     <section>
-      <div id="popup-container">
-        <div id="popup-content">
-          <h2>download brochure</h2>
-          <p>contact us right now</p>
-          <form>
-            <input type="email" placeholder="Your name">
-            <button type="submit">Sign Up</button>
-          </form>
-          <button id="close-btn">Close</button>
+      <div id="popup-container" class="modal">
+        <div id="popup-content" class="Cta-modalcontents">
+          <div>
+            <img class="seconded_absImage" src="./src/assets/image/city15.jpg" alt="">
+            <img class="seconded_absImaged" src="./src/assets/image/city14.jpg" alt="">
+          </div>
+          <div class="cta_backgournWrapper">
+            <img class="Cta_background" src="./src/assets/image/city20.png" alt="">
+          </div>
+          <div class="cta_blur_secs">
+            <div>
+              <div>
+                <img class="secs_emaarLogo" src="./src/assets/svg/emaarLogoFull.svg" alt="">
+              </div>
+              <div class="secs_support">
+                <div class="cta_support">
+                  <div class="cta_contucus">contact us right now</div>
+                  <div class="cta_socialmedia">
+                    <div class="cta_social">
+                      <div>telegram</div>
+                      <img src="./src/assets/svg/telegram.svg" alt="">
+                    </div>
+                    <div  class="cta_social">
+                      <div>whatsapp</div>
+                      <img src="./src/assets/svg/whatsapp.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="secs_form">
+                <div class="secs_title">get a unique offer</div>
+                <div class="secs_smallgap">
+                <input class="secs_input" type="text" placeholder="Your name">
+              <input class="secs_input" type="text" placeholder="Your e-mail">
+                <input class="secs_input" type="text" placeholder="Your phone">
+                <button class="primaryButton">enquire</button>
+              </div>
+                <div class="secs_works">
+                  <div>Handover dates</div>
+                  <div>Project's</div>
+                  <div>Masterplan</div>
+                </div>
+              </div>
+            </div>
+            <button id="close-btn" class="close">Close <img src="./src/assets/svg/close.svg" alt=""></button>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="emaarProperties">
       <div class="imageAbsolute">
         <img src="./src/assets/image/city.jpg" alt="" />
         <img src="./src/assets/svg/emaarBlured.svg" alt="" />
       </div>
-      <div class="emaarProperties_textContent">
+      <div
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        class="emaarProperties_textContent"
+      >
         <div class="title">AVAILABLE HOMES FOR SALE BY EMAAR PROPERTIES</div>
         <div class="txt">
           Emaar Properties is one of the world’s most valuable and admired real
@@ -85,11 +135,11 @@
           </div>
         </div>
         <div>
-          <button class="primaryButton">see more</button>
+          <button id="seeMore" class="primaryButton">see more</button>
         </div>
       </div>
     </section>
-    <section class="globalShablon">
+    <section data-aos="fade-up" class="globalShablon">
       <div class="title topProjects">top projects</div>
       <div class="topProjects_content">
         <div class="topProjects_block">
@@ -116,7 +166,13 @@
       </div>
     </section>
     <section class="globalShablon location">
-      <div class="title location_title">choose the best location for you</div>
+      <div
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        class="title location_title"
+      >
+        choose the best location for you
+      </div>
       <div class="location_map">
         <div class="map_details">
           <div class="creekDot dot">
@@ -146,12 +202,17 @@
               <img src="./src/assets/image/city6.jpg" alt="" />
             </div>
           </div>
-          <img src="./src/assets/png/map.png" alt="" />
+          <img class="map" src="./src/assets/png/map.png" alt="" />
         </div>
       </div>
     </section>
+
     <section class="globalShablon communityProjects">
-      <div class="communityProjects_stickyBlock">
+      <div
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        class="communityProjects_stickyBlock"
+      >
         <div class="communityProjects_block">
           <div class="communityProjects_title">community</div>
           <a class="communityProjects_subtitle">ellips dubai creek harbour</a>
@@ -203,7 +264,11 @@
               />
               <div class="communityProjects_sidebar">
                 <div class="communityProjects_sidebarBox">
-                  <img src="./src/assets/image/city7.png" alt="" />
+                  <img
+                    class="communityProjects_slideImage"
+                    src="./src/assets/image/city7.png"
+                    alt=""
+                  />
                   <div class="communityProjects_content">
                     <div class="communityProjects_sidebarTitle">creek rise</div>
                     <div class="communityProjects_facil">
@@ -219,7 +284,9 @@
                     <div class="communityProjects_fromAed">
                       FROM AED 2 288 888
                     </div>
-                    <button class="primaryButton" id="propertyDetail">get details</button>
+                    <button class="primaryButton" id="propertyDetail">
+                      get details
+                    </button>
                   </div>
                 </div>
               </div>
@@ -278,7 +345,9 @@
                     <div class="communityProjects_fromAed">
                       FROM AED 1 247 888
                     </div>
-                    <button class="primaryButton" id="propertyDetais">get details</button>
+                    <button class="primaryButton" id="propertyDetais">
+                      get details
+                    </button>
                   </div>
                 </div>
               </div>
@@ -334,7 +403,9 @@
                     <div class="communityProjects_fromAed">
                       FROM AED 1 138 888
                     </div>
-                    <button class="primaryButton" id="propertyDetails">get details</button>
+                    <button class="primaryButton" id="propertyDetails">
+                      get details
+                    </button>
                   </div>
                 </div>
               </div>
@@ -348,12 +419,144 @@
         </div>
       </div>
     </section>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Hello, I am a pop-up!</p>
+    <section class="globalShablon paralaxfPart">
+      <div class="paealakIMagewrapper">
+        <img class="paralaksImage" src="./src/assets/image/city12.png" alt="" />
+      </div>
+      <div class="ParalaxImageText">
+        <div class="title paralaxTitle">payment option</div>
+        <div class="paralaxBorderBottom"></div>
+        <div class="ParalaxImageInfo">
+          Emaar properties offer various payment options to help make your
+          property purchase as stress-free as possible. Some project have up to
+          3 Years payment plan and we also offer mortgage option for ready
+          units. Click "Enquire Now" below to get more information about payment
+          options available for your purchase.
+        </div>
+        <button class="secondaryButton">enquire now</button>
+      </div>
+    </section>
+
+    <section class="globalShablon paralaxsPart">
+      <div class="paralakIMagewrapper">
+        <img class="paralaksImage" src="./src/assets/image/city13.png" alt="" />
+      </div>
+      <div class="ParalaxImageTexts">
+        <div class="title paralaxTitle">MORE ABOUT EMAAR</div>
+        <div class="paralaxBorderBottom"></div>
+        <div class="ParalaxImageInfo">
+          Emaar is the master-developer of Downtown Dubai, which occupies two of
+          the most prestigious square kilometres in Dubai. Flanked on either
+          side by Sheikh Zayed Road and Financial Centre Road, this dynamic city
+          hub has catalysed the economy and cemented Dubai’s reputation as a
+          true global icon. Providing the ultimate metropolitan lifestyle
+          abounding with world-class landmarks, entertainment and glamour,
+          Downtown Dubai is a true heart of the emirate.
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Pop-up Modal -->
+    <div id="myCtaModal" class="modal CTAmodal">
+      <div class=" Cta-modalcontent">
+        <span id="CTAclose" class="close">close <img src="./src/assets/svg/close.svg" alt=""></span>
+        <div >
+          <div class="cta_backgournWrapper">
+            <img class="Cta_background" src="./src/assets/image/city20.png" alt="">
+          </div>
+          <div class="cta_blur">
+            <div class="cta_inputwrapper">
+              <div>
+                <div class="cta_title">download brochure</div>
+                <input class="cta_input" type="text" placeholder="Your name">
+              </div>
+              <input class="cta_input" type="text" placeholder="Your e-mail">
+              <input class="cta_input" type="text" placeholder="Your phone">
+              <button class="cta_button">Download brochure</button>
+            </div>
+          </div>
+          <div class="cta_blue">
+            <img class="cta_emaartransformedLogo" src="./src/assets/svg/emaarBorder.svg" alt="">
+            <div class="cta_support">
+              <div class="cta_contucus">contact us right now</div>
+              <div class="cta_socialmedia">
+                <div class="cta_social">
+                  <div>telegram</div>
+                  <img src="./src/assets/svg/telegram.svg" alt="">
+                </div>
+                <div  class="cta_social">
+                  <div>whatsapp</div>
+                  <img src="./src/assets/svg/whatsapp.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
     </div>
+
+
+    <!-- property get details pop-up modal -->
+    <div id="myModal" class="modal secondsModal">
+      <div class="modal-content_second">
+        <span id="secondClose" class="close">close &times;</span>
+        <p>30 seconds</p>
+        <!-- <div>
+          <img class="firstmodalAbsoluteImage" src="./src/assets/image/city15.jpg" alt="">
+          <img src="./src/assets/image/city14.jpg" alt="">
+        </div> -->
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="footer_women">
+        <img src="./src/assets/png/women.svg" alt="">
+      </div>
+
+      <div class="footer_whiteWrapper">
+        <div>
+          <div class="title footer_title">SPEAK TO A SPECIALIST</div>
+        <div class="footer_rectangle"></div>
+      </div>
+      <div class="footer_contactUstxt">
+        <div class="footer_greenSqueare"></div>
+        <div class="footergreensuqareTxt">We are Online</div>
+        <div class="footer_contacttxt">Contact us below to get limited availability, payment plan and to book a unit.</div>
+      </div>
+      <div class="footer_input">
+        <input class="footer_requestInput" type="text" placeholder="Your name" id="">
+        <input class="footer_requestInput" type="text" placeholder="Your email" id="">
+        <input class="footer_requestInput" type="text" placeholder="Phone number" id="">
+        <button class="callBtn secondaryButton">request a call</button>
+      </div>
+    </div>
+
+      <div class="footer_Blue">
+        <div class="footer_category">
+          <div class="footer_categoryItems">top projects</div>
+          <div class="footer_categoryItems">community</div>
+          <div class="footer_categoryItems">payment option</div>
+        </div>
+        <div class="footer_numssoc">
+          <div class="footer_Number">971 56XXX-XX-XX   SHOW</div>
+          <div class="footer_socialmedia">
+            <div>telegram</div>
+            <div><img src="./src/assets/svg/telegram.svg" alt=""></div>
+          </div>
+          <div class="footer_socialmedia">
+            <div>whatsapp</div>
+            <div><img src="./src/assets/svg/whatsapp.svg" alt=""></div>
+          </div>
+          <div class="footer_Logo"><img src="./src/assets/svg/emaarBorder.svg" alt=""></div>
+        </div>
+      </div>
+    </footer>
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -54,7 +54,7 @@ setTimeout(function() {
     closeBtn.addEventListener('click', function() {
       popupContainer.style.display = 'none';
     });
-  }, 1000);
+  }, 30000);
 AOS.init({disable: 'mobile'});
 AOS.init({
 	disable: function() {
@@ -62,4 +62,10 @@ AOS.init({
 	  return window.innerWidth < maxWidth;
 	}
   });
-  
+
+
+
+
+
+
+

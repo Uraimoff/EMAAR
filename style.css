@@ -306,10 +306,10 @@ html {
   left: 180px;
 }
 .dot {
-  z-index: 9;
+  z-index: 1;
 }
 .creekDot {
-  z-index: 9;
+  z-index: 1;
   position: absolute;
   top: 180px;
   right: 470px;
@@ -985,7 +985,7 @@ html {
 /* faked modal */
 .modal {
   display: none;
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   left: 0;
   top: 0;
@@ -996,19 +996,21 @@ html {
   background: rgba(228, 228, 228, 0.85);
   backdrop-filter: blur(15px);
 }
+
 .modal-content {
   background-color: #fefefe;
   padding: 20px;
+  z-index: 999;
   border: 1px solid #888;
   width: 80%;
 }
 .modal-content_second {
+  /* position: relative; */
+
   background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
   width: 100%;
-  max-width: 1080px;
+  max-width: 1440px;
+  margin: 0px auto;
 }
 .close {
   display: flex;
@@ -1047,7 +1049,6 @@ html {
 #popup-container {
   display: none;
   position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -1280,7 +1281,7 @@ html {
   padding-left: 60px;
   padding-top: 50px;
 }
-.secs_form{
+.secs_form {
   position: absolute;
   right: 110px;
   top: -50px;
@@ -1302,18 +1303,18 @@ html {
   text-transform: uppercase;
   color: #071c35;
 }
-.secs_works{
+.secs_works {
   display: flex;
   justify-content: space-between;
-  font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
-text-transform: uppercase;
-color: #071C35;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #071c35;
 }
-.secs_input{
+.secs_input {
   border: none;
   width: 100%;
   /* max-width: 350px; */
@@ -1325,13 +1326,461 @@ color: #071C35;
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
-  color: #071C35;
+  color: #071c35;
 }
-.secs_input:focus{
+.secs_input:focus {
   outline: none;
 }
-.secs_smallgap{
+.secs_smallgap {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.property_title {
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #071c35;
+  padding: 35px 70px;
+}
+.propertymodal_close {
+  font-family: "Lato";
+  padding: 35px 70px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #071c35;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.propertytop_title {
+  display: flex;
+  justify-content: space-between;
+}
+.popertymodal_form {
+  position: relative;
+}
+.popertymodal_forminfo {
+  box-sizing: border-box;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
+  backdrop-filter: blur(7.5px);
+  top: 100px;
+  left: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  /* max-height: 576px; */
+}
+.type {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #777777;
+}
+.apartmentinfo {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 24px;
+
+  color: #071c35;
+}
+.propertymodal_text {
+  display: flex;
+  width: 100%;
+  max-width: 860px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140%;
+  color: #777777;
+  padding: 58px 540px;
+}
+.propertymodal_first {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 60px;
+}
+.propertymodal_firstItems {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.propertymodal_advanteges {
+  padding: 8px 10px 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.propertymodal_second {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+.propertymodal_button {
+  height: 40px;
+}
+.propertymodal_title {
+  display: flex;
+  justify-content: center;
+}
+.propertymodal_gallerybig {
+  width: 100%;
+  max-width: 860px;
+}
+.propertymodal_gallery {
+  display: flex;
+  width: 100%;
+  margin: 30px 70px;
+  gap: 22px;
+}
+.propertyimagegalery {
+  width: 420px;
+  height: 240px;
+}
+.propertymodalgap {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* gallery */
+.relative {
+  position: relative;
+  overflow: auto;
+  height: 3727px;
+}
+#image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#image-container.expanded img {
+  position: fixed;
+  top: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+  z-index: 999;
+}
+#image-container.expanded::before {
+  content: "";
+  display: block;
+  /* overflow: auto;  */
+  position: fixed;
+  top: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  z-index: 998;
+}
+
+#close-btngallery {
+  display: none;
+  position: absolute;
+  top: 1;
+  right: 0;
+  padding: 10px;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#image-container.expanded #close-btngallery {
+  display: block;
+}
+/* counter */
+
+.counter {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.counter .count {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #071c35;
+}
+.counter div {
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #071c35;
+  padding-left: 60px;
+}
+.counters {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.counters .counts {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #071c35;
+}
+.counters div {
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #071c35;
+  padding-left: 60px;
+}
+
+/* counter v.2 */
+/* .counter {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px; 
+  visibility: hidden; /* initially hide the counter 
+  opacity: 0; initially set the opacity to 0 
+  transition: visibility 0s, opacity 0.5s linear;  add a transition effect */
+/* }
+
+.counter .count {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+} */
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* background-color: #ddd; */
+  color: #333;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.place_name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #777777;
+}
+.place_arrivementtime {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #071c35;
+}
+.propertymodal_slidertitile {
+  /* display: flex; */
+  /* padding: 148px 146px 30px; */
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #071c35;
+}
+.propmodal_sidebarBox {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1132px;
+  height: 100%;
+  max-height: 549px;
+  background: rgba(255, 255, 255, 0.85);
+  /* flex-direction: column; */
+  display: flex;
+  padding: 50px 100px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.07));
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_sidebarInnerTitle {
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #071c35;
+}
+.secondaryTitle {
+  font-family: "Lato";
+  padding-top: 5px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #777777;
+}
+.slide_itemName {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 357px;
+}
+.slideitem {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.slideitem div {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #071c35;
+}
+.slide_itemValue {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #071c35;
+}
+.Slide_text {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.slide_fromAed {
+  padding: 36px 0 110px 0;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #071c35;
+}
+.slide_sidebarInnerTitle {
+  font-family: "Alethia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #071c35;
+}
+.modal_slide {
+  display: flex;
+  justify-content: space-between;
+}
+.slide_text {
+  display: flex;
+  flex-direction: row;
+}
+.slide_threedmodel {
+  padding-top: 30px;
+}
+.slide_Title {
+  padding: 0 154px 30px;
+}
+.property_slideArrow {
+  top: 300px;
+}
+.gap {
+  gap: 100px;
+}
+.textCenter {
+  text-align: center;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #777777;
+}
+.paddingTop {
+  padding-top: 150px;
+}
+.secondaryText {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #777777;
+}
+.propertymodal_foot{
+  padding: 0 49px 150px;
 }
